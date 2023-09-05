@@ -4,7 +4,7 @@ const saveTshirt = (tshirt) => {
 
     var serviceName = "mongodb-atlas";
  
-    var dbName = "mdm-dev"; // context.values.get("DATABASE")
+    var dbName = context.values.get("DATABASE")
     var dbDailyReadings = "mdm_measures_data";
     var dbReadings = "mdm_measures_lake";
     debugger;
