@@ -1,20 +1,22 @@
-const tshirtContext = require("tshirt");
+const v8n = require("v8n");
 
-const saveTshirt = (tshirt) => {
+const validation = v8n()
+    .string()
+    .minLength(3);
 
-    var serviceName = "mongodb-atlas";
+const saveTshirt = async (tshirt) => {
+    validation.check(tshirt.name);
+
+    var serviceName = "DevTesting";
  
     var dbName = context.values.get("DATABASE")
-    var dbDailyReadings = "mdm_measures_data";
-    var dbReadings = "mdm_measures_lake";
+    var dbDailyReadings = "tshirt";
     debugger;
 
-    var meter_collection = context.services.get(serviceName).db(dbName).collection('mmd_meters');
-    var meter_install = context.services.get(serviceName).db(dbName).collection('mmd_meter_installations');
-    var install_collection = context.services.get(serviceName).db(dbName).collection('mmd_installations');
-    
-// goldenergy.atlassian.net
-    tshirtContext.saveTshirt(tshirt);
+    var collection = context.services.get(serviceName).db(dbName).collection(dbDailyReadings);
+    const findResult = await collection.find().toArray();
+
+    return true;
 };
 
 // Function exported to App Services

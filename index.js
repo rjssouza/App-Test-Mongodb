@@ -1,4 +1,5 @@
 
+const _ = require('lodash');
 const process = require('process');
 const { MongoClient } = require("mongodb");
 const realm_config = require("./realm_config.json");
@@ -7,22 +8,23 @@ const functions = {
     hello: require("./functions/hello")
 };
 
-debugger;
-
 const env = process.argv[2];
-const { values } = env == "local" ? require(`./environments/${env}.json`) : require(`./environments/${env}.json`);
+const { values } = env == "local" ? require(`./environments/no-environment.json`) : require(`./environments/${env}.json`);
 
-const services = {
-    "privado": {
+const services = [
+    {
+        "nome": "DevTesting",
         "url": "mongodb+srv://robsonjesus908:hWkMI3UfU9ihS3KH@devtesting.8ko1ona.mongodb.net/?appName=mongosh+1.10.6"
     },
-    "development": {
+    {
+        "nome": "development",
         "url": "mongodb+srv://robson:JufjhNXAy9qoR0Dg@mongodb-mdm-dev.ceszd.mongodb.net/mdm-dev"
     },
-    "local": {
+    {
+        "nome": "local",
         "url": "mongodb://localhost:27017/"
     }
-}
+]
 
 global.context = {
     // whichever global context methods you want to mock.
@@ -41,13 +43,27 @@ global.context = {
         tag: env,
         values: values
     },
-    values,
+    values: {
+        get: (valueName) => {
+            const valueObj = require(`./values/${valueName}`);
+
+            return valueObj.value;
+        }
+    },
     functions,
     services: {
         get: (serviceName) => {
-            const client = new MongoClient(uri);   
+            let client = _.find(services, function(service) {
+                return service.nome === serviceName;
+            });
+
+            const mongoClient = new MongoClient(client.url);   
+
+            return mongoClient;
         }
     }
 }
 
 global.context.functions.tshirt({ name: "t" });
+
+console.log("test");
