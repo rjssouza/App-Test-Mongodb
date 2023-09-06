@@ -15,7 +15,7 @@ const saveTshirt = async (tshirt) => {
     const  dbDailyReadings = "tshirt";
 
     const  collection = context.services.get(serviceName).db(dbName).collection(dbDailyReadings);
-    const resInsert = await collection.insertOne(result[0]);
+    const resInsert = await collection.insertOne(tshirt);
 
     const findResult = await collection.find().toArray();
 
