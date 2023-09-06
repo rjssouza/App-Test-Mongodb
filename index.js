@@ -13,15 +13,16 @@ const { values } = env == "local" ? require(`./environments/no-environment.json`
 
 const services = [
     {
-        "nome": "DevTesting",
+        "nome": "DevTesting-mongodb-atlas",
         "url": "mongodb+srv://robsonjesus908:hWkMI3UfU9ihS3KH@devtesting.8ko1ona.mongodb.net/?appName=mongosh+1.10.6"
     },
     {
-        "nome": "development",
-        "url": "mongodb+srv://robson:JufjhNXAy9qoR0Dg@mongodb-mdm-dev.ceszd.mongodb.net/mdm-dev"
+        "nome": "development-mongodb-atlas",
+        "url": "mongodb+srv://robsonjesus908:hWkMI3UfU9ihS3KH@devtesting.8ko1ona.mongodb.net/?appName=mongosh+1.10.6"
+//        "url": "mongodb+srv://robson:JufjhNXAy9qoR0Dg@mongodb-mdm-dev.ceszd.mongodb.net/mdm-dev"
     },
     {
-        "nome": "local",
+        "nome": "local-mongodb-atlas",
         "url": "mongodb://localhost:27017/"
     }
 ]
