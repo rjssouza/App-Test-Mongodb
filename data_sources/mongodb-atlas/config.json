@@ -1,5 +1,5 @@
 {
-    "name": "development-mongodb-atlas",
+    "name": "mongodb-atlas",
     "type": "mongodb-atlas",
     "config": {
         "clusterName": "DevTesting",
