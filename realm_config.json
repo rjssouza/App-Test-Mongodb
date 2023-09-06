@@ -1,7 +1,7 @@
 {
-    "app_id": "application-test-kvelt",
+    "app_id": "application-dev-ktfii",
     "config_version": 20210101,
-    "name": "Application-Test",
+    "name": "Application-Dev",
     "location": "US-VA",
     "provider_region": "aws-us-east-1",
     "deployment_model": "LOCAL",
