@@ -1,0 +1,10 @@
+{
+    "name": "test-mongodb-atlas",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName": "DevTesting",
+        "readPreference": "primary",
+        "wireProtocolEnabled": false
+    },
+    "version": 1
+}
