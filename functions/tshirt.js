@@ -19,7 +19,7 @@ const saveTshirt = async (tshirt) => {
     var collection = context.services.get(serviceName).db(dbName).collection(dbDailyReadings);
     const findResult = await collection.find().toArray();
 
-    return true;
+    return findResult;
 };
 
 // Function exported to App Services
