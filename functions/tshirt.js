@@ -1,11 +1,14 @@
 const v8n = require("v8n");
 
-const validation = v8n()
-    .string()
-    .minLength(3);
+const validate_name = (name) => {
+    return v8n()
+        .string()
+        .minLength(3)
+        .check(name);
+} 
 
 const saveTshirt = async (tshirt) => {
-    validation.check(tshirt.name);
+    validate_name(tshirt.name);
 
     var serviceName = "DevTesting";
  
