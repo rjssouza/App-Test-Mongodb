@@ -10,7 +10,7 @@ const validate_name = (name) => {
 const saveTshirt = async (tshirt) => {
     validate_name(tshirt.name);
 
-    var serviceName = "DevTesting";
+    var serviceName = "mongodb-atlas";
  
     var dbName = context.values.get("DATABASE")
     var dbDailyReadings = "tshirt";
