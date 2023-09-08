@@ -2,7 +2,7 @@
     "name": "development-mongodb-atlas", 
     "type": "mongodb-atlas",
     "config": {
-        "clusterName": "DevTesting",
+        "clusterName": "dev-testing",
         "readPreference": "primary",
         "wireProtocolEnabled": false
     },
