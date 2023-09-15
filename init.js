@@ -36,15 +36,11 @@ const { values } =
 const services = [
   {
     nome: "test-mongodb-atlas",
-    url: "mongodb+srv://robson:vGBwkwJHdx71knjN@mongodb-mdm-tst.ceszd.mongodb.net/?retryWrites=true&w=majority",
+    url: "mongodb+srv://r",
   },
   {
     nome: "development-mongodb-atlas",
-    url: "mongodb+srv://robson:vGBwkwJHdx71knjN@mongodb-mdm-dev.ceszd.mongodb.net/?retryWrites=true&w=majority",
-  },
-  {
-    nome: "qa-mongodb-atlas",
-    url: "mongodb+srv://robson:vGBwkwJHdx71knjN@mongodb-mdm-tst.ceszd.mongodb.net/?retryWrites=true&w=majority",
+    url: "mongodb+srv://r",
   },
   {
     nome: "local-mongodb-atlas",
