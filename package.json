@@ -1,16 +1,19 @@
 {
-  "name": "functions",
+  "name": "app-test-mongodb",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tshirt": "node . local tshirt \"{\\\"name\\\": \\\"teste\\\"}\""
+    "tshirt": "node . --env=local --fn=tshirt \"{\\\"name\\\": \\\"teste\\\"}\"",
+    "test": "jest --runInBand --detectOpenHandles --forceExit"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Robson",
   "dependencies": {
+    "jest": "^29.7.0",
     "lodash": "^4.17.21",
+    "moment": "^2.29.4",
     "mongodb": "^6.0.0",
+    "mongodb-memory-server": "^8.15.1",
     "v8n": "^1.5.1"
   }
 }
