@@ -36,11 +36,11 @@ const { values } =
 const services = [
   {
     nome: "test-mongodb-atlas",
-    url: "mongodb+srv://r",
+    url: "mongodb+srv://robsonjesus908:hWkMI3UfU9ihS3KH@devtesting.8ko1ona.mongodb.net/?appName=mongosh+1.10.6",
   },
   {
     nome: "development-mongodb-atlas",
-    url: "mongodb+srv://r",
+    url: "mongodb+srv://robsonjesus908:hWkMI3UfU9ihS3KH@devtesting.8ko1ona.mongodb.net/?appName=mongosh+1.10.6",
   },
   {
     nome: "local-mongodb-atlas",
